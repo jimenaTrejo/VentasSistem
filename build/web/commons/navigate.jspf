@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light p-3 mb-2 bg-danger text-white">
+    <a class="navbar-brand" href="Controlador?menu=Principal">Castores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarScroll" aria-controls="navbarScroll"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0" style="max-height: 100px;">
+            <li class="nav-item active">
+                <a class="nav-link" href="Controladorr?menu=Producto&accion=Listar">
+                    <img src="img/icons/home.png" alt=""/> Inventario
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="Controladorr?menu=Ventas&accion=Listar">
+                    <img src="img/icons/home.png" alt=""/> Ventas
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li><!-- comment -->
+            <li class="nav-item active">
+                <a class="nav-link" href="Controladorr?menu=Historial&accion=Listar">
+                    <img src="img/icons/home.png" alt=""/> Historial
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+            <li class="nav-item dropdown  ">
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown"> 
+                    <li>
+                        <a class="dropdown-item" href="Controlador?menu=Empleado&accion=Listar">                              
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="img/icons/usuario.png" alt=""/></td>
+                                        <td>Usuarios</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </li>                    
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" href="Controlador?menu=EnviarCorreo&accion=New">                             
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="img/icons/email.png" alt=""/></td>
+                                        <td>Enviar Correo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav justify-content-end">
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#"
+                    id="navbarScrollingDropdown2" role="button" data-toggle="dropdown"
+                    aria-expanded="false" style="color: black; font-weight: bold">
+                    <img src="img/icons/user.png" alt=""/>  ${Usuario.getNombreUsuario()} 
+                </a>
+                <ul class="dropdown-menu text-center dropdown-menu-right"
+                    aria-labelledby="navbarScrollingDropdown2">
+                    <li><a class="dropdown-item" href="#"><i
+                                class="bi bi-person-circle"
+                                style="font-size: 3rem; color: cornflowerblue;"></i></a></li>
+                    <li><a class="dropdown-item" href="#">${Usuario.getnombreUsuario()}</a></li>
+                    <li><a class="dropdown-item" href="#">${Usuario.getnombreUsuario()}@gmail.com</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="Validar?accion=logout">Salir</a></li>
+                </ul></li>
+        </ul>
+    </div>
+</nav>
