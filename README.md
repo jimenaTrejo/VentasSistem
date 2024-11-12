@@ -1,9 +1,12 @@
  • IDE utilizado.
     Apache Netbeans 
+    
 • lenguaje de programación utilizado.
     Java
+    
 • DBMS utilizado y su versión.
     MySQL
+    
 • Lista de pasos para correr su aplicación.
     - Descargar proyecto en github. 
     - Descomprimir la carpeta 
