@@ -39,6 +39,7 @@ public class Controladorr extends HttpServlet {
     int idc;
     int idp;
 
+    HistorialDAO  histoDAO = new HistorialDAO();
     Ventas v = new Ventas();
     List<Ventas> lista = new ArrayList<>();
     int item;
@@ -96,10 +97,12 @@ public class Controladorr extends HttpServlet {
                     break;
 
                 case "Actualizar":
+                    String usuario = request.getParameter("nombreUsuario");
                     int id = Integer.parseInt(request.getParameter("id"));
                     nombre = request.getParameter("txtNombre");
                     precio = Double.parseDouble(request.getParameter("txtPrecio"));
                     cantidad = Integer.parseInt(request.getParameter("txtCantidad"));
+                    String tipo= "entrada";
 
                     Productos productoActualizado = new Productos();
                     productoActualizado.setId(id);
@@ -107,8 +110,13 @@ public class Controladorr extends HttpServlet {
                     productoActualizado.setPrecio(precio);
                     productoActualizado.setCantidad(cantidad);
                     System.out.println("actu" + productoActualizado);
-
+                     System.out.println(id);
+                    System.out.println(tipo);
+                    System.out.println(cantidad);
                     pdao.actualizarstock(id, cantidad);
+                    histoDAO.agregarMovimiento(id, tipo, cantidad);
+                   
+
 
                     response.sendRedirect("Controladorr?menu=Producto&accion=Listar");
                     break;
@@ -134,6 +142,7 @@ public class Controladorr extends HttpServlet {
                     System.out.println("se entro a salida");
                     int id = Integer.parseInt(request.getParameter("id"));
                     int cantidadSalida = Integer.parseInt(request.getParameter("cantidadSalida"));
+                    String tipo= "salida";
                     System.out.println("idProducto" + id);
                     // Buscar el producto por ID para obtener su stock actual
                     Productos producto = new Productos();
@@ -167,6 +176,10 @@ public class Controladorr extends HttpServlet {
                         int nuevoStock = producto.getCantidad() - cantidadSalida;
                         pdao.actualizarstock(id, nuevoStock);
                         request.setAttribute("mensajeExito", "Salida de producto realizada exitosamente.");
+                         System.out.println( "salida id"+ id);
+                        System.out.println("salida tipo"+ tipo);
+                        System.out.println("salida cantidad"+ cantidadSalida);
+                        histoDAO.agregarMovimiento(id, tipo, cantidadSalida);
                     }
 
                     // Redirigir a la página de salida de productos para mostrar resultados

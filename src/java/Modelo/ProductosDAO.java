@@ -129,7 +129,6 @@ public class ProductosDAO {
             System.out.println("Error:" + e);
         }
         return r;
-
     }
 
     public Productos listarId(int id) {

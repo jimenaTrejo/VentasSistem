@@ -4,11 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Controlador/Controladorr.java</file>
-            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Modelo/Historial.java</file>
+            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/web/Producto.jsp</file>
+            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Modelo/Productos.java</file>
             <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Modelo/HistorialDAO.java</file>
-            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/web/index.jsp</file>
-            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/web/commons/navigate.jspf</file>
-            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/web/Historial.jsp</file>
+            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Modelo/ProductosDAO.java</file>
+            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Modelo/Usuario.java</file>
+            <file>file:/C:/Users/Jimena/Documents/NetBeansProjects/CastoresInventario/src/java/Modelo/Movimientos.java</file>
         </group>
     </open-files>
 </project-private>

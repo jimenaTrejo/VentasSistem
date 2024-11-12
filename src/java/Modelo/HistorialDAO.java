@@ -21,6 +21,8 @@ public class HistorialDAO {
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
+    int r;
+
 
     // Método para obtener el historial de movimientos filtrados por tipo (entrada/salida)
     public List<Historial> obtenerHistorialPorTipo(String tipo) {
@@ -49,6 +51,26 @@ public class HistorialDAO {
             cerrarConexiones();
         }
         return historial;
+    }
+     public int agregarMovimiento(int id, String tipo, int cantidad ) {
+        System.out.println("Entra a agregar");
+        String sql = "insert into movimientos(idProducto, tipo, cantidad, usuario)values(?,?,?,?)";
+        System.out.println(sql);
+        try {
+            con = cn.Conexion();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, tipo);
+            ps.setInt(3, cantidad);
+            ps.setString(4, "admin" );
+            System.out.println(sql);
+            ps.executeUpdate();
+            System.out.println("ps" + ps);
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        }
+         System.out.println("salio exitosa" + r);
+        return r;
     }
 
     // Método para obtener todo el historial de movimientos (sin filtro de tipo)

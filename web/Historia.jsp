@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Historia de Movimientos</h1>
+        <h1>Historial de Movimientos</h1>
 
         <form action="Controladorr?menu=Historial" method="post">
             <div class="mb-3">
